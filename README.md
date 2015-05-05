@@ -59,7 +59,7 @@ d3.js/php/ブラウザを用いて、mysqlに格納されているテーブル�
 * 判例にマウスオーバー(mouseover on regend)
   * 該当するものだけ散布図で強調表示と、シートで該当するものだけを表示
 * バブルにマウスオーバー(mouseover on mouseover)
-  * 該当するデータだけをシートに表示
+  * 該当するデータだけをシートに表示、ツールチップラジオボタンを選択時のみ(only choose tooltip)
 
 ## バグを見つけたら(if find a bug)
 直してください。(please fix)
