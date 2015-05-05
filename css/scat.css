@@ -1,0 +1,40 @@
+html {
+    font: 10px sans-serif;
+    font-weight: lighter;
+}
+#ctrl{
+  background-color : #FAFAFA;
+  height           : 150px;
+  width            : 1200px;
+  border           : 1px solid #000077;
+  text-align       : center;
+  table-layout     : fixed;
+  margin-top       : 10px;
+}
+
+.bubble{
+  stroke:#000;
+}
+.bubble:hover{
+  fill-opacity:1;
+}
+.axLine,.assLine,.partLine{
+  fill:none;
+  stroke:#000;
+  shape-rendering:crispEdges;
+  font-weight: lighter;
+}
+.assLine,.partLine{
+  stroke-width    :1;
+}
+.partLine{
+  stroke-dasharray:2 4;
+}
+.ols{
+  stroke-width:2;
+}
+table,td, th {
+  border: "1px" ;
+  border-collapse: collapse;
+  border: 1px #1C79C6 solid;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title> scattergram with d3.js</title>
+
+    <!-- faviconの読み込み(FireFoxのみ)-->
+    <link rel="shortcut icon" type="image/svg+xml" sizes="any" href="img/favicon.svg" />
+
+    <!-- cssファイルの読み込み-->
+    <link rel="stylesheet" href="css/scat.css">
+
+    <!--3rdパーティjavascript読み込み-->
+    <script type="text/javascript" src="http://d3js.org/d3.v3.js"></script>
+    <script type="text/javascript" src = "http://code.jquery.com/jquery-2.1.4.js"></script>
+    
+    <!--自作javascript-->
+    <script type="text/javascript" src = "js/scat.js"></script>
+    <script type="text/javascript" src = "js/scat.init.js"></script>
+
+    <!--散布図開始-->
+    <script>
+      // DOMの準備が終わったら実行する
+      //
+      $(function (){
+        scat.initModule( $('#scat'));
+      });
+    </script>
+
+  </head>
+
+  <body>
+    <!--散布図制御領域描画-->
+    <div id = "ctrl">
+      <h1>scattergram with d3.js</h1>
+        <detail>
+          <form class="axSlct">
+            x axis
+            <select id="axSlct-xIn" class ="axSel-input"></select>
+            x scale
+            <select id = "axSlct-xScale" class = "axSel-input">
+              <option selected="selected" value="linear">linear</option>
+              <option value="log">log</option>
+              <option value="power">power</option>
+              <option value="sqrt">sqrt</option>
+            </select>
+            y axis
+            <select id ="axSlct-yIn" calss ="axSel-input"></select>
+            y scale
+            <select id = "axSlct-yScale" class = "axSel-input">
+              <option selected="selected" value="linear">linear</option>
+              <option value="log">log</option>
+              <option value="power">power</option>
+              <option value="sqrt">sqrt</option>
+            </select>
+            <br>
+            bubble size
+            <select id ="axSlct-rIn" class="axSel-input"></select>
+
+            color
+            <select id ="axSlct-cIn" class="axSel-input"></select>
+            <br>
+                assist line<input type="radio" id = "axSlct-aIn" class = "axSel-input" name="assOrPop" value="assistLine" checked>
+                tool tip<input type="radio" id = "axSlct-pIn" class = "axSel-input" name="assOrPop" value="popUp" >
+            ols
+            <input id="axSlct-oIn" type="checkbox" value="ols" >  
+            <input type="button" id="redraw" value="loading..." disabled/>
+                
+            </form>
+        </detail>
+    </div>
+    <!--散布図描画領域-->
+    <div id="scat">
+      <svg id = "svg"></svg>
+    </div>
+    <!--データ表領域描画-->
+    <div id ="sheet">
+      <table id = "table"></table>
+    </div>
+  </body>
+</html>
