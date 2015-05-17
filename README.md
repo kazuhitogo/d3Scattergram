@@ -61,6 +61,9 @@ d3.js/php/ブラウザを用いて、mysqlに格納されているテーブル�
 * バブルにマウスオーバー(mouseover on mouseover)
   * 該当するデータだけをシートに表示、ツールチップラジオボタンを選択時のみ(only choose tooltip)
 
+## 動作保障
+* google chromeのみ
+
 ## バグを見つけたら(if find a bug)
 直してください。(please fix)
 
